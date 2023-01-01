@@ -1,0 +1,102 @@
+*{
+    scroll-behavior: smooth;
+}
+
+#starter{
+    background-image: url("./home.jpg");
+}
+
+#homsoc div:hover{
+    transform: scale(1.1);
+}
+
+#herobox{
+    position: relative;
+    height: 384px;
+    width: 384px;
+    overflow: hidden;
+}
+
+#herobox img {
+    height: 370px;
+    width: 370px;
+    z-index: 10;
+}
+
+#herobox::before{
+    content:"";
+    position: absolute;
+    height: 140%;
+    width: 378px;
+    background: linear-gradient(blue,magenta);
+    animation: rotate 1.4s linear infinite;
+}
+
+#herobox::after {
+    content: "";
+    position: absolute;
+    transform: translate(-2px,-2px);
+    height: 370px;
+    width: 370px;
+    border-radius: 100%;
+    inset: 7px;
+    background: #1a202c;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(350deg);
+    }
+}
+
+#skillbox div:hover{
+    transform: scale(1.1);
+}
+
+#edubox div:hover{
+    transform: scale(1.05);
+}
+
+#quick a:hover{
+    transform: scale(1.1);
+}
+
+#social a:hover{
+    transform: scale(1.3);
+}
+
+#link a:hover{
+    transform: scale(0.97);
+}
+
+#footer h1 > i{
+    animation: heart 0.35s infinite alternate;
+}
+
+@keyframes heart {
+    to{
+        transform: scale(1.1);
+    }
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+}
+
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(blue,magenta);
+    border-radius: 25px; 
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
